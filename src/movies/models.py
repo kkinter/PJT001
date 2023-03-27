@@ -39,6 +39,10 @@ class Movie(models.Model):
 
     objects = MovieManager()
 
+    def get_absolute_url(self):
+        return f"{self.id}/"
+    
+
     def __str__(self):
         if not self.release_date:
             return f"{self.title}"
