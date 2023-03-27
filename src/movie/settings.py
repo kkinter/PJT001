@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     # apps
     'movies',
     'profiles',
-    'ratings'
+    'ratings',
+    'exports'
 ]
 
 SITE_ID = 1
@@ -152,3 +153,4 @@ CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
 CELERY_BROKER_URL = config('CELERY_BROKER_REDIS_URL', default='redis://localhost:6379')
 CELERY_RESULT_BACKEND = "django-db"
 
+MEDIA_ROOT = BASE_DIR / 'local-cdn' / 'media'
