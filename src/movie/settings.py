@@ -40,16 +40,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # celery
+    'django.contrib.sites',
+    # ex app
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django_celery_beat',
     'django_celery_results',
-    #
     'django_extensions',
     # apps
     'movies',
     'profiles',
     'ratings'
 ]
+
+SITE_ID = 1
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_VERIFICATION = None
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
