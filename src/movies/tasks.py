@@ -2,7 +2,7 @@ from celery import shared_task
 
 from .models import Movie
 
-@shared_task('task_calculate_movie_ratings')
+@shared_task(name='task_calculate_movie_ratings')
 def task_calculate_movie_ratings(all=False, count=None):
     """
     task_calculate_movie_ratings(all=False, count=None)
