@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
     {% include 'navbar.html' %} {% block content %} {% endblock %}
     <div>{% block extra_body %} {% endblock %}</div>
     <script
